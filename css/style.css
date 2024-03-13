@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.calculator {
+  width: 600px;
+  height: 730px;
+  display: flex;
+  margin: auto;
+  flex-flow: wrap column;
+  gap: 50px;
+  padding: 3em;
+  border: 1px solid black;
+  box-shadow: gray -3px 12px 20px 0px, inset gray 0px 0px 20px 1px;
+
+  & .header {
+    border: 1px solid black;
+    padding: 10px 30px;
+    text-align: right;
+
+    & span {
+      color: gray;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  & .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+
+  & .body .numbers {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  & .body .numbers button,
+  & .body .operators button {
+    font-size: 1.3em;
+    padding: 1.1em;
+    background-color: tomato;
+    color: white;
+    border-color: black;
+    box-shadow: inset #350505 -2px -3px 20px 0px;
+  }
+
+  .body .operators {
+    display: flex;
+    flex-flow: wrap column;
+  }
+}
